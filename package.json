@@ -11,7 +11,7 @@
     "start": "gulp dev",
     "dev": "concurrently --kill-others 'npm:watch-scripts' 'npm:watch-css' 'gulp dev'",
     "watch-scripts": "gulp scripts",
-    "watch-css": "postcss src/_sass/main.scss --output css/main.css --watch",
+    "watch-css": "postcss src/_sass/main.scss --output src/css/main.css --watch",
     "build": "npm run css:build && gulp dev:build",
     "css:build": "NODE_ENV=production postcss src/_sass/main.scss --output css/main.css",
     "postinstall": "gulp dev:install",
