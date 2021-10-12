@@ -1,8 +1,13 @@
 import path from 'path'
+let env = process.env.NODE_ENV === 'production'
+  ? { mode: 'production', watch: false }
+  : { mode: 'development', watch: true }
+
+console.log("ENV", env)
 
 let webpackConfig = {
-  mode: "production",
-  watch: true,
+  mode: env.mode,
+  watch: env.watch,
   entry: './scripts/index.js',
   output: {
     filename: './js/main.js',

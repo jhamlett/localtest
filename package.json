@@ -12,9 +12,9 @@
     "dev": "concurrently --kill-others 'npm:watch-scripts' 'npm:watch-css' 'gulp dev'",
     "watch-scripts": "gulp scripts",
     "watch-css": "postcss src/_sass/main.scss --output src/css/main.css --watch",
-    "build": "npm run css:build && gulp dev:build",
-    "css:build": "NODE_ENV=production postcss src/_sass/main.scss --output css/main.css",
-    "postinstall": "gulp dev:install",
+    "build": "npm run build-css && npm run build-scripts && gulp dev:build",
+    "build-css": "NODE_ENV=production postcss src/_sass/main.scss --output css/main.css",
+    "build-scripts": "NODE_ENV=production gulp scripts",
     "proof": "gulp dev:build && gulp proof",
     "state": "gulp dev:build && gulp state",
     "clean": "rimraf dist src/.jekyll-cache"
