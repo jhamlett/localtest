@@ -5,5 +5,12 @@ module.exports = {
   content: ["../dist/site/**/*.html"],
 
   // These are the stylesheets that will be subjected to the purge
-  css: ["../dist/site/css/*.css"]
+  css: ["../dist/site/css/*.css"],
+
+  extractors: [
+    {
+      extractor: content => content.match(/[A-z0-9-:\/]+/g),
+      extensions: ['html','md']
+    }
+  ]
 };
