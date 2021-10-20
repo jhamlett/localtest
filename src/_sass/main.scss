@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#pageHeader,
+#pageFooter{
+    @apply bg-gray-500;
+}
+#pageHeader,
+#pageFooter,
+#pageContent{
+    @apply px-4 py-1;
+}
+
+.container{
+    @apply max-w-6xl m-auto;
+}
