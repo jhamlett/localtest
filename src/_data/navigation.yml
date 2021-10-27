@@ -1,0 +1,18 @@
+top-nav:  
+  - page: About
+    url: /about/
+    submenu:    
+    - page: Submenu 1
+      url: /#sublink1
+    - page: Submenu 2
+      url: /#sublink2
+    - page: Submenu 3
+      url: /#sublink3
+  - page: Team
+    url: /team/
+  - page: Blog
+    url: /blog/
+  - page: Contact
+    url: /contact/
+
+
