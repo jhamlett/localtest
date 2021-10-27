@@ -1,0 +1,34 @@
+---
+layout: page
+title: Project Template
+object:
+---
+
+
+<div class="container py-10 flex flex-col space-y-4">
+
+    <h1>Toggle buttons using AlpineJS</h1>
+    https://tailwindui.com/components/application-ui/forms/toggles
+
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
+    <button type="button" x-data="{ checked: false }" @click="checked = !checked" class="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" :class="checked ? 'bg-indigo-600' : 'bg-grey-200'" role="switch" aria-checked="false" >
+        <span class="sr-only">Use setting</span>
+        <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
+        <span aria-hidden="true" class="translate-x-0 pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200" :class="checked ? 'translate-x-5' : 'translate-x-0'"></span>
+    </button>
+
+
+
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <button type="button" x-data="{ checked: false }" @click="checked = !checked" class="flex-shrink-0 group relative rounded-full inline-flex items-center justify-center h-5 w-10 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" role="switch" aria-checked="false">
+        <span class="sr-only">Use setting</span>
+        <span aria-hidden="true" class="pointer-events-none absolute bg-white w-full h-full rounded-md"></span>
+        <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
+        <span aria-hidden="true" class="bg-gray-200 pointer-events-none absolute h-4 w-9 mx-auto rounded-full transition-colors ease-in-out duration-200" :class="checked ? 'bg-indigo-600' : 'bg-grey-200'"></span>
+        <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
+        <span aria-hidden="true" class="translate-x-0 pointer-events-none absolute left-0 inline-block h-5 w-5 border border-gray-200 rounded-full bg-white shadow transform ring-0 transition-transform ease-in-out duration-200" :class="checked ? 'translate-x-5' : 'translate-x-0'"></span>
+    </button>
+
+
+  </div>
