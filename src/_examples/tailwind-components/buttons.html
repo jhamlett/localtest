@@ -5,61 +5,115 @@ object:
 ---
 
 
-<div class="container">
+<div class="container mt-10">
     
-
-
-  <h1>Button with Vanilla Javascript dropdown</h1>
-  <div class=" py-8">
-
-    <div class="w-full sm:w-6/12 md:w-4/12">
-    <div class="relative inline-flex align-middle w-full">
-    <button
-        class="bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-        type="button" onclick="openDropdown(event,'dropdown-example')">
-        Dropdown<i class="fas fa-angle-down ml-2"></i>
-    </button>
-    <div class="hidden bg-white  text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1"
-        style="min-width:12rem" id="dropdown-example">
-        <a href="#"
-        class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">
-        Action
-        </a>
-        <a href="#"
-        class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">
-        Another action
-        </a>
-        <a href="#"
-        class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">
-        Something else here
-        </a>
-        <div class="h-0 my-2 border border-solid border-t-0 border-blueGray-800 opacity-25"></div>
-        <a href="#"
-        class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">
-        Seprated link
-        </a>
-    </div>
-    </div>
+  <div class="my-10">
+    <h1>Cool dropdown time!</h1>
+    <p>The dropdowns can be used for buttons, select inputs, or navigatin menus!</p>
   </div>
 
-<!-- Required popper.js -->
-<script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
-<script>
+  <h2>Button with Vanilla Javascript dropdown</h2>
+  <p>I have not discovered an easy way to animate the dropdown with vanilla JS because the dropdown must be fully hidden when not visible. Transitioning opacity would make the element invisible, but still clickable.</p>
+  <div class="pb-8 flex">
+    <div class="relative">
+      <button
+          class="bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="button" onclick="openDropdown(event,'dropdown-example')">
+          Dropdown<i class="fas fa-angle-down ml-2"></i>
+      </button>
+      <div class="hidden absolute top-full left-0 bg-white  text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1"
+          style="min-width:12rem" id="dropdown-example">
+          <a href="#"
+          class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">
+          Action
+          </a>
+          <a href="#"
+          class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">
+          Another action
+          </a>
+          <a href="#"
+          class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">
+          Something else here
+          </a>
+          <div class="h-0 my-2 border border-solid border-t-0 border-blueGray-800 opacity-25"></div>
+          <a href="#"
+          class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">
+          Seprated link
+          </a>
+      </div>
+    </div>   
+  </div>
+
+  <script>
     function openDropdown(event, dropdownID) {
       let element = event.target;
+      let menu = document.getElementById(dropdownID);
       while (element.nodeName !== "BUTTON") {
         element = element.parentNode;
       }
-      var popper = Popper.createPopper(element, document.getElementById(dropdownID), {
-        placement: 'bottom-start'
-      });
-      document.getElementById(dropdownID).classList.toggle("hidden");
-      document.getElementById(dropdownID).classList.toggle("block");
-      // animation could be achieved by updating transform classes. i.e. 
-      //      document.getElementById(dropdownID).classList.remove("transform","opacity-0","scale-95");
-      //      document.getElementById(dropdownID).classList.add("transform","opacity-100","scale-100");
+      menu.classList.toggle("hidden");
+      menu.classList.toggle("block");
     }
-</script>
+  </script>
+
+
+
+
+
+  <h2>Button with Vanilla Javascript dropdown and popper.js</h2>
+  <p>popper.js prevents the dropdown from going off-screen.</p>
+  <div class="pb-8">
+
+    <div class="flex">
+      <div class="relative">
+        <button
+            class="bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            type="button" onclick="openDropdownPopper(event,'dropdown-example-popper')">
+            Dropdown
+        </button>
+        <div class="hidden bg-white  text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1"
+            style="min-width:12rem" id="dropdown-example-popper">
+            <a href="#"
+            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">
+            Action
+            </a>
+            <a href="#"
+            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">
+            Another action
+            </a>
+            <a href="#"
+            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">
+            Something else here
+            </a>
+            <div class="h-0 my-2 border border-solid border-t-0 border-blueGray-800 opacity-25"></div>
+            <a href="#"
+            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100">
+            Seprated link
+            </a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Required popper.js -->
+  <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+  <script>
+      function openDropdownPopper(event, dropdownID) {
+        let element = event.target;
+        while (element.nodeName !== "BUTTON") {
+          element = element.parentNode;
+        }
+        var popper = Popper.createPopper(element, document.getElementById(dropdownID), {
+          placement: 'bottom-start'
+        });
+        document.getElementById(dropdownID).classList.toggle("hidden");
+        document.getElementById(dropdownID).classList.toggle("block");
+        // animation could be achieved by updating transform classes. i.e. 
+        //      document.getElementById(dropdownID).classList.remove("transform","opacity-0","scale-95");
+        //      document.getElementById(dropdownID).classList.add("transform","opacity-100","scale-100","transition-all");
+      }
+  </script>
 
 
 
@@ -68,17 +122,14 @@ object:
 
 
 
-<BR><BR><BR><BR><BR>
 
 
 
 
-
-
-
-<h1>Button with AlpineJS dropdown</h1>
+<h2>Button with AlpineJS dropdown</h2>
+<p>Requires loading alpine.js. Attributes are added to classes to control animations.</p>
 <!-- This example requires Tailwind CSS v2.0+ -->
-<div x-data="{ isOpen: false }" class="py-8 relative inline-block text-left">
+<div x-data="{ isOpen: false }" class="pb-8 relative inline-block text-left">
     <div >
       <button type="button" @click="isOpen = !isOpen" class="inline-flex border p-2" id="menu-button" aria-expanded="true" aria-haspopup="true">
         Options
@@ -88,17 +139,7 @@ object:
         </svg>
       </button>
     </div>
-  
-    <!--
-      Dropdown menu, show/hide based on menu state.
-  
-      Entering: "transition ease-out duration-100"
-        From: "transform opacity-0 scale-95"
-        To: "transform opacity-100 scale-100"
-      Leaving: "transition ease-in duration-75"
-        From: "transform opacity-100 scale-100"
-        To: "transform opacity-0 scale-95"
-    -->
+
     <div x-show="isOpen"
       x-transition:enter="transition ease-out duration-300 "
       x-transition:enter-start="transform opacity-0 scale-95"
@@ -126,8 +167,6 @@ object:
     </div>
   </div>
   
-
-
 
 
   
