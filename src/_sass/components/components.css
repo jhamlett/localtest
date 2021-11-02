@@ -1,0 +1,10 @@
+@layer components {
+    #pageHeader,
+    #pageFooter{
+      @apply bg-gray-500;
+    }    
+  
+    .container{
+      @apply max-w-6xl m-auto px-4;
+    }
+  }

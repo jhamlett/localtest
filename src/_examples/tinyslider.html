@@ -1,0 +1,48 @@
+---
+layout: page
+title: Tiny Slider
+---
+
+<!-- This is a cheat to make sure these classes are not excluded by postcss. There is probably a better way to do this in the postcss config file. -->
+<span class="tns-outer tns-ovh tns-nav hidden"><button class="tns-nav-active"></button></span>
+
+<div class="container slider-extend-beyond-bounds">
+  <h2 class="my-10">Tiny Slider Example</h2>
+  <div class="tinyslider-example">
+    <div class="p-10 bg-red-700">Slide 1</div>
+    <div class="p-10 bg-gray-400">Slide 2</div>
+    <div class="p-10 bg-indigo-400">Slide 3</div>
+    <div class="p-10 bg-gray-600">Slide 4</div>
+    <div class="p-10 bg-blue-200">Slide 5</div>
+    <div class="p-10 bg-yellow-300">Slide 6</div>
+  </div>
+</div>
+
+
+
+<!-- This javascript should go in the footer if you're going to use it. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script>
+let tinyslider_example = tns({
+    container: '.tinyslider-example',
+    mouseDrag: true,
+    items: 1,
+    loop: true,
+    responsive: {
+        640: {
+        items: 2
+        },
+        700: {
+        items: 3,
+        },
+        900: {
+        items: 4,
+        }
+    }
+});
+</script>
+
+  
+
+
+

@@ -31914,6 +31914,28 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Wrap this around a tiny-slider component to allow it to go outside the container. */
+
+.slider-extend-beyond-bounds .tns-ovh{
+  overflow: visible;
+}
+
+.tns-nav button{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgba(0, 0, 0, var(--tw-border-opacity));
+}
+
+.tns-nav button.tns-nav-active{
+  --tw-bg-opacity: 1;
+  background-color: rgba(252, 165, 165, var(--tw-bg-opacity))
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

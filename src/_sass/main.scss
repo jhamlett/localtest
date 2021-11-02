@@ -1,32 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import '/base/base.css';
 
-@layer base {
-  h1, h2, h3, h4, h5, b, strong{
-    @apply font-bold;
-  }
-  h1 {
-    @apply text-2xl;
-  }
-  h2 {
-    @apply text-xl;
-  }
-  h3 {
-    @apply text-lg;
-  }
-  a {
-    
-  }
-}
+@import "tailwindcss/components";
+@import '/components/components.css';
 
-@layer components {
-  #pageHeader,
-  #pageFooter{
-    @apply bg-gray-500;
-  }    
-
-  .container{
-    @apply max-w-6xl m-auto px-4;
-  }
-}
+@import "tailwindcss/utilities";
+@import '/utilities/utilities.css';
