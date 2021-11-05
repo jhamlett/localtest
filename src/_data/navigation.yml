@@ -1,26 +1,18 @@
 top-nav:  
-  - page: Programs
-    url: /programs/
-    submenu:
-  - page: Approach
-    url: /approach/
+  - page: About
+    url: /about/
+    submenu:    
+    - page: Submenu 1
+      url: /#sublink1
+    - page: Submenu 2
+      url: /#sublink2
+    - page: Submenu 3
+      url: /#sublink3
   - page: Team
     url: /team/
   - page: Blog
     url: /blog/
-  - page: Case Studies
-    url: /case-studies/
-  - page: Pricing
-    url: /pricing/
   - page: Contact
     url: /contact/
 
 
-
-footer-nav:
-  - page: Privacy
-    url: /privacy/
-  - page: Terms and Conditions
-    url: /terms/
-  - page: Faq
-    url: /faq/

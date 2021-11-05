@@ -49,17 +49,3 @@ _array_structures:
     value:
       title:
       url:
-
-
-_select_data:
-  colors:
-    - orange
-    - orangered
-    - orangered-light
-    - red
-    - purple
-    - purple-light
-    - yellow
-  button-colors:
-    - transparent
-    - purple
