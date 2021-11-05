@@ -22,7 +22,11 @@
   "author": "Ocupop",
   "license": "MIT",
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.3.0",
+    "@tailwindcss/forms": "^0.3.4",
+    "@tailwindcss/typography": "tailwindcss/typography",
     "gulp-cli": "^2.3.0",
+    "postcss-import": "^14.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "remixicon": "^2.5.0"

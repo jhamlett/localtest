@@ -1,0 +1,88 @@
+customers:
+  - name: Adobe
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: The Battery
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: BioMarin
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: The Battery
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: Clorox
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: coinbase
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: Elastic
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: Financial Engines
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: Four Seasons
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: Fuseproject
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: GAP
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: Genentech
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: Gilead
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: IDEO
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: Intel
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: Jama
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: Kite Pharma
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: Lookout
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: Method
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: Procter & Gamble
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: Showtime
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: TeachForAmerica
+    url: /#
+    logo: http://fpoimg.com/100x100
+  - name: Zenefits
+    url: /#
+    logo: http://fpoimg.com/100x100
+footer-nav:
+  - page: Programs
+    url: /programs/
+    submenu:
+  - page: Philosophy
+    url: /philosophy/
+  - page: Team
+    url: /team/
+  - page: Newsroom
+    url: /newsroom/
+  - page: Case Studies
+    url: /case-studies/
+  - page: Pricing
+    url: /pricing/
+  - page: Privacy
+    url: /privacy/
+  - page: Terms and Conditions
+    url: /terms/

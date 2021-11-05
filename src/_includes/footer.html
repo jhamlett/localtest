@@ -1,21 +1,13 @@
-<footer id="pageFooter" class="bg-dark">
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-4">
-          {{ site.title }}
-        </div>
-        <div class="col-12 col-md-8">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a href="/" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="/about/" class="nav-link">About</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+<footer id="pageFooter" class="bg-gray-100 py-4 mt-0">
+  <div class="container text-center">      
+    <ul class="navbar-nav">
+      {% for item in site.data.navigation.footer-nav %}
+      <li class="nav-item inline-block mx-3 uppercase">
+          <a href="{{item.url}}" class="text-base font-medium text-gray-500 hover:text-gray-700">
+            {{item.page}}
+          </a>
+      </li>
+      {% endfor %}
+    </ul>      
+  </div>
 </footer>

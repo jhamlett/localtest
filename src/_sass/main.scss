@@ -1,17 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import '/base/main.scss';
 
-#pageHeader,
-#pageFooter{
-    @apply bg-gray-500;
-}
-#pageHeader,
-#pageFooter,
-#pageContent{
-    @apply px-4 py-1;
-}
+@import "tailwindcss/components";
+@import '/components/main.scss';
 
-.container{
-    @apply max-w-6xl m-auto;
-}
+@import "tailwindcss/utilities";
+@import '/utilities/main.scss';
+
+
+
+
+
+
+
+

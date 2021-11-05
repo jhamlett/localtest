@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap');
+@import 'variables.scss';
+
+
+body{
+    @apply font-body;
+}
+
+@layer base {
+    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5{
+      @apply font-normal;
+      margin-bottom:0.5em;
+    }
+    h1, .h1 {
+      @apply text-3xl lg:text-4xl ;
+    }
+    h2, .h2 {
+      @apply text-2xl lg:text-3xl ;
+    }
+    h3, .h3 {
+      @apply text-2xl;
+    }
+    h4, .h4 {
+      @apply text-xl;
+    }
+    h5, .h5 {
+      @apply text-lg;
+    }
+    p{
+        margin-bottom:0.3em;
+    }
+    a {
+      
+    }
+}

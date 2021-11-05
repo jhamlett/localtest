@@ -1,0 +1,26 @@
+top-nav:  
+  - page: Programs
+    url: /programs/
+    submenu:
+  - page: Approach
+    url: /approach/
+  - page: Team
+    url: /team/
+  - page: Blog
+    url: /blog/
+  - page: Case Studies
+    url: /case-studies/
+  - page: Pricing
+    url: /pricing/
+  - page: Contact
+    url: /contact/
+
+
+
+footer-nav:
+  - page: Privacy
+    url: /privacy/
+  - page: Terms and Conditions
+    url: /terms/
+  - page: Faq
+    url: /faq/

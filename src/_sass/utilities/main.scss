@@ -1,0 +1,27 @@
+@import 'stretch-column-to-edge.scss';
+@import 'tiny-slider.scss';
+
+
+
+
+
+  /* YOL Underlines */
+  u{ 
+    @apply no-underline; 
+  }
+  
+
+
+  .curves{
+    @apply absolute top-0 bottom-0 ;
+  }
+  .curves--left{
+    @apply left-0;
+  }
+  .curves--right{
+    @apply right-0 transform -rotate-180;
+  }
+  .curves svg{
+    @apply h-full w-auto;
+  } 
+
